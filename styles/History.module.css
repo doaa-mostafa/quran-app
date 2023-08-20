@@ -1,0 +1,10 @@
+.closeIcon{
+    width: 20px;
+    height: 20px;
+   
+    right: 0.3rem;
+    background-color: azure;
+    border-radius: 50%;
+    padding: 2px;
+    margin-bottom: 10px;
+}

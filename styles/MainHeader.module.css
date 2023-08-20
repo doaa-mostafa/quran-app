@@ -1,0 +1,30 @@
+.closeIcon {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+}
+
+.dropdown{
+  position: absolute;
+  background-color: #efefef;
+  padding: 1rem;
+ 
+  z-index: 50;
+  align-items: center;
+  gap: 1.25rem;
+  top: 4rem;
+  right: 1.2rem;
+  border-radius: 8px;
+}
+
+.container{
+  /* margin-left: 1rem; */
+  padding: 0.4rem ;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 17px;
+  display: flex;
+ 
+}

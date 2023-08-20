@@ -1,0 +1,17 @@
+.play {
+    background-color:#a4c1b3;
+    width: 70px;
+    height: 70px;
+    border-radius: 60%;
+    padding: 20px;
+}
+
+
+
+.push {
+  background-color:#6875b3;
+  width: 70px;
+  height: 70px;
+  border-radius: 60%;
+  padding: 20px;
+}

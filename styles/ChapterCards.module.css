@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100&display=swap');
+
+
+  /* font-family: 'Amiri', serif;
+font-family: 'IBM Plex Sans Arabic', sans-serif; */
+
+ 
+
+
+ .button:hover{
+   @apply bg-[#c6d8cd] border-[#a4c1b3];
+   @apply   text-gray-700 border-[2px];
+    
+ }
+
+
+
+
+  /* "shadow-md bg-[#a4c1b3] rounded-xl text-center text-2xl py-7 px-4 cursor-pointer"
+
+  "shadow-md bg-[#95b2c1] rounded-xl text-center text-2xl py-7 px-4 cursor-pointer hover:bg-[#c6d8cd] border-[#95b2c1]" */

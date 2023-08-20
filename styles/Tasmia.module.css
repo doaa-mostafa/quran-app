@@ -1,0 +1,36 @@
+.versenumber {
+  display: inline-block;
+
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5em;
+  position: relative;
+  margin-right: 2;
+}
+
+.border {
+ /* display: inline-block; */
+  background-image: url("../public/quranversesymbol.png");
+  background-size: cover; /* adjusts the size of the background image */
+  background-position: center; /* centers the background image */
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  background-size: cover;
+  width: 1em;
+  height: 1.4em;
+  z-index: 1;
+}
+.container {
+  display: inline-block;
+  position: absolute;
+  margin-right: 10px;
+}
+
+.hidden {
+  border-bottom: 1px solid black;
+  color: transparent;
+}

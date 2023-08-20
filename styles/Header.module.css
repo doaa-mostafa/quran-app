@@ -1,0 +1,49 @@
+.eye {
+  border-radius: 70%;
+  box-shadow: 1px -1px 15px 5px rgb(0 0 0 / 13%);
+  padding: 2px;
+  cursor: pointer;
+}
+
+.sidebarbutton {
+  padding: 4px 25px;
+  background-color: #fe7f81;
+  margin-right: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.closeIcon {
+ 
+  top: 0.3rem;
+  right: 0.3rem;
+}
+
+.dropdown{
+  position: absolute;
+  background-color: #efefef;
+  padding: 1rem;
+  align-items: center;
+  gap: 1.25rem;
+  top: 4rem;
+  right: 1.2rem;
+  border-radius: 8px;
+  z-index: 50;
+}
+
+.container{
+
+  padding: 0.4rem ;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 17px;
+  display: flex;
+ 
+
+}

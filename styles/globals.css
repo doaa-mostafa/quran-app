@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap'); */
+@import "arabic-fonts/src/css/arabic-fonts.css";
+/* @import "@fontsource/amiri-quran"; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100&display=swap");
+
+
+@layer base {
+  body {
+    @apply bg-default dark:bg-[#282c2f];
+    direction: rtl;
+    font-family: "Noto Kufi Arabic", sans-serif;
+  }
+
+  .format-text * {
+    @apply text-black dark:text-white;
+  }
+
+  .search-card em {
+    @apply bg-yellow-200 not-italic bg-primary/20 px-1;
+  }
+}
+
+
+
+
+.container {
+  max-width: 1100px;
+  width: 70%;
+  margin: 0 auto;
+}
+
