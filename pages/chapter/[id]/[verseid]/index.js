@@ -16,7 +16,7 @@ const Verseid = ({ Data, Name }) => {
   const router = useRouter();
   const { verseid } = router.query;
   let Aya = Data[verseid - 1].text_imlaei;
-  const [imageUrl, setImageUrl] = useState("/view.png");
+  const [EyeIcon, setEyeIcon] = useState("/view.png");
   const [showSidebar, setShowSidebar] = useState(false);
   const [showNavbar, setshowNavbar] = useState(false);
   function toggleSidebar() {
@@ -49,8 +49,8 @@ const Verseid = ({ Data, Name }) => {
         <title>تسميع</title>
       </Head>
       <Header
-        imageUrl={imageUrl}
-        setImageUrl={setImageUrl}
+        EyeIcon={EyeIcon}
+        setEyeIcon={setEyeIcon}
         toggleSidebar={toggleSidebar}
         toggleNavbar={toggleNavbar}
       />
@@ -69,8 +69,8 @@ const Verseid = ({ Data, Name }) => {
 
           <div className="mt-20 text-center pr-52 pl-52">
             <Tasmia
-              imageUrl={imageUrl}
-              setImageUrl={setImageUrl}
+              EyeIcon={EyeIcon}
+              setEyeIcon={setEyeIcon}
               AyaChunks={AyaChunks}
               Trans={Trans}
               Aya={Aya}
@@ -104,22 +104,22 @@ export async function getServerSideProps(context) {
   const name = await data2Res.json();
 
   const req = context.req;
-  const session = await getSession({ req });
+  // const session = await getSession({ req });
 
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
+  // if (!session) {
+  //   return {
+  //     redirect: {
+  //       destination: "/login",
+  //       permanent: false,
+  //     },
+  //   };
+  // }
 
   return {
     props: {
       Data: Data.verses,
       Name: name.chapter,
-      session,
+      // session,
     },
   };
 }

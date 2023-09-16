@@ -10,12 +10,9 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 
 const Header = ({
-  imageUrl,
-  setImageUrl,
+  EyeIcon,
+  setEyeIcon,
   toggleSidebar,
-  toggleNavbar,
-  error,
-  setError,
 }) => {
   const router = useRouter();
   const [showDropdown, setShowDropdown] = useState(false);
@@ -30,10 +27,10 @@ const Header = ({
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   const ToggleEye = () => {
-    if (imageUrl === "/view.png") {
-      setImageUrl("/hide.png");
+    if ( EyeIcon === "/view.png") {
+      setEyeIcon("/hide.png");
     } else {
-      setImageUrl("/view.png");
+      setEyeIcon("/view.png");
     }
   };
 
@@ -89,7 +86,8 @@ const Header = ({
             <div
               className=" border-[2px] mr-5 bg-gray-50 rounded-full  p-1 cursor-pointer "
               onClick={() => {
-                signOut();
+                // signOut();
+                window.location.href = "/login";
               }}
             >
               <Image
@@ -143,7 +141,7 @@ const Header = ({
         {/* <p className="whitespace-nowrap font-semibold pr-3 ">Doaa Mostafa</p> */}
         <div className="dark:bg-white dark:rounded-full">
           <Image
-            src={imageUrl}
+            src={EyeIcon}
             width={25}
             height={25}
             alt="viewicon"

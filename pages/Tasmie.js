@@ -31,7 +31,7 @@ const Tasmie = () => {
     }
   }, [page]);
 
-  const [imageUrl, setImageUrl] = useState("/view.png");
+  const [EyeIcon, setEyeIcon] = useState("/view.png");
   const [error, setError] = useState("");
   const [showNavbar, setshowNavbar] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
@@ -105,8 +105,8 @@ const Tasmie = () => {
         <title>تسميع</title>
       </Head>
       <Header
-        imageUrl={imageUrl}
-        setImageUrl={setImageUrl}
+        EyeIcon={EyeIcon}
+        setEyeIcon={setEyeIcon}
         toggleSidebar={toggleSidebar}
         toggleNavbar={toggleNavbar}
         error={error}
@@ -119,8 +119,8 @@ const Tasmie = () => {
         <BookScreen
           page={page}
           setPage={setPage}
-          imageUrl={imageUrl}
-          setImageUrl={setImageUrl}
+          EyeIcon={EyeIcon}
+          setEyeIcon={setEyeIcon}
           error={error}
           setError={setError}
         />
@@ -137,21 +137,21 @@ const Tasmie = () => {
   );
 };
 
-export async function getServerSideProps({ req }) {
-  const session = await getSession({ req });
+// export async function getServerSideProps({ req }) {
+//   const session = await getSession({ req });
 
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
+//   if (!session) {
+//     return {
+//       redirect: {
+//         destination: "/login",
+//         permanent: false,
+//       },
+//     };
+//   }
 
-  return {
-    props: { session },
-  };
-}
+//   return {
+//     props: { session },
+//   };
+// }
 
 export default React.memo(Tasmie);

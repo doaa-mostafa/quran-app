@@ -6,7 +6,7 @@ import ColorVerse from "./ColorVerse";
 import { useRouter } from "next/router";
 
 const RightPage = ({
-  imageUrl,
+  EyeIcon,
   error,
   setError,
   page,
@@ -44,7 +44,7 @@ const RightPage = ({
           error={error}
           setError={setError}
           text={verse}
-          imageUrl={imageUrl}
+          EyeIcon={EyeIcon}
           serverMessage={serverMessage}
           listening={listening}
           setServerMessage={setServerMessage}

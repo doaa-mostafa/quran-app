@@ -9,9 +9,7 @@ const Mic = () => {
   const [micToggle, setMicToggle] = useState(false);
 
   const {
-    transcript,
     listening,
-    resetTranscript,
     browserSupportsSpeechRecognition,
   } = useSpeechRecognition();
 

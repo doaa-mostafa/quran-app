@@ -6,7 +6,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import { toArabic } from "arabic-digits";
 
-const VerseCard = ({ chapter, imageUrl, setImageUrl }) => {
+const VerseCard = ({ chapter,  EyeIcon, setEyeIcon }) => {
   const Chapter = chapter.verse_key.split(":")[0];
   const Verse = chapter.verse_key.split(":")[1];
 
@@ -33,10 +33,10 @@ const VerseCard = ({ chapter, imageUrl, setImageUrl }) => {
           Aya={Aya}
           versenumber={versenumber}
           chapter={chapter}
-          imageUrl={imageUrl}
+          EyeIcon={EyeIcon}
           Verse={Verse}
           Chapter={Chapter}
-          setImageUrl={setImageUrl}
+          setEyeIcon={setEyeIcon}
         />
       </div>
     </Link>

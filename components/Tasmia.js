@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Tasmia.module.css";
 
-const Tasmia = ({ Trans, AyaChunks, versenumber, id, activeId, imageUrl }) => {
+const Tasmia = ({ Trans, AyaChunks, versenumber, id,  EyeIcon }) => {
   return (
     <div className="text-4xl  cursor-pointer ">
       <span
         className={`${
-          imageUrl === "/hide.png" ? styles.hidden : "font-indopak"
+          EyeIcon === "/hide.png" ? styles.hidden : "font-indopak"
         }`}
       >
         {AyaChunks.map((chunk, i) => {
@@ -41,5 +41,3 @@ const Tasmia = ({ Trans, AyaChunks, versenumber, id, activeId, imageUrl }) => {
 };
 
 export default Tasmia;
-
-

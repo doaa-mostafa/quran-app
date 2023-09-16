@@ -4,17 +4,15 @@ import LeftPage from "./LeftPage";
 import styles from "../styles/BookScreen.module.css";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import axios from "axios";
+
 
 const BookScreen = ({
   page,
   setPage,
-  imageUrl,
-  setImageUrl,
+  EyeIcon,
+  setEyeIcon,
   error,
   setError,
-  setServerMessage,
-  counter,
   listening,
   serverMessage,
 }) => {
@@ -29,41 +27,36 @@ const BookScreen = ({
   if (!mounted) return null;
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  
-
-
-
   return (
     <>
       <div className="container mx-auto  ">
         <div className="flex flex-col lg:flex-row ">
           <div
-            className={`${currentTheme === "dark" ? styles.darkshadow  :styles.shadowmd }`}
+            className={`${
+              currentTheme === "dark" ? styles.darkshadow : styles.shadowmd
+            }`}
           >
             <RightPage
               page={page}
               setPage={setPage}
-              imageUrl={imageUrl}
+              EyeIcon={EyeIcon}
               error={error}
               setError={setError}
-           
-           
             />
           </div>
           <div
             className={` ${
-             currentTheme === "dark" ? styles.darkshadow2  :styles.shadowmd2
+              currentTheme === "dark" ? styles.darkshadow2 : styles.shadowmd2
             }`}
           >
             <LeftPage
               page={page}
               setPage={setPage}
-              imageUrl={imageUrl}
+              EyeIcon={ EyeIcon}
               error={error}
               setError={setError}
               serverMessage={serverMessage}
               listening={listening}
-            
             />
           </div>
         </div>

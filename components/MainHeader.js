@@ -10,7 +10,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 const MainHeader = ({
-  imageUrl,
+  EyeIcon,
   setImageUrl,
   toggleSidebar,
   toggleNavbar,
@@ -37,10 +37,10 @@ const MainHeader = ({
   const loggedIn = false;
 
   const ToggleEye = () => {
-    if (imageUrl === "/view.png") {
-      setImageUrl("/hide.png");
+    if ( EyeIcon === "/view.png") {
+      setEyeIcon("/hide.png");
     } else {
-      setImageUrl("/view.png");
+      setEyeIcon("/view.png");
     }
   };
 
@@ -94,7 +94,8 @@ const MainHeader = ({
             <div
               className=" border-[2px] mr-5 bg-gray-50 rounded-full  p-1 cursor-pointer "
               onClick={() => {
-                signOut();
+                // signOut();
+                window.location.href = '/login';
               }}
             >
               <Image

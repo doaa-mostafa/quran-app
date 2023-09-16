@@ -5,13 +5,11 @@ import styles from "../styles/BookScreen.module.css";
 import ColorVerse from "./ColorVerse";
 
 const LeftPage = ({
-  imageUrl,
+  EyeIcon,
   page,
-  setPage,
   setServerMessage,
   error,
   setError,
-  counter,
   listening,
   serverMessage,
 }) => {
@@ -40,7 +38,7 @@ const LeftPage = ({
           error={error}
           setError={setError}
           text={verse}
-          imageUrl={imageUrl}
+          EyeIcon={EyeIcon}
           serverMessage={serverMessage}
           listening={listening}
           setServerMessage={setServerMessage}

@@ -7,10 +7,10 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import "@fontsource/amiri-quran"; // Defaults to weight 400.
 
-const ColorVerse = ({ text, imageUrl, scrollRef, error, setError }) => {
+const ColorVerse = ({ text, EyeIcon, scrollRef, error, setError }) => {
   const versenumber = toArabic(parseInt(text.id));
   const [highlightedText, setHighlightedText] = useState("");
-  const [unhighlightedText, setunHighlightedText] = useState("");
+ 
 
   const {
     transcript,
@@ -82,7 +82,7 @@ const ColorVerse = ({ text, imageUrl, scrollRef, error, setError }) => {
     <span>
       <span
         className={`${
-          imageUrl === "/hide.png" ? styles.hidden : "font-indopak"
+          EyeIcon === "/hide.png" ? styles.hidden : "font-indopak"
         }`}
       >
         <span

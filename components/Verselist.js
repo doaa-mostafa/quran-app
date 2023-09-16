@@ -4,9 +4,8 @@ import Image from "next/image";
 import styles from "../styles/verselist.module.css";
 import { useEffect, useState } from "react";
 
-const Verselist = ({ chapters, Name, imageUrl, setImageUrl }) => {
+const Verselist = ({ chapters, Name,  EyeIcon, setEyeIcon}) => {
   const [chapterDetail, setChapterDetail] = useState([]);
-  const [surahName, setSurahName] = useState("");
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false); // New state to track button disable status
 
@@ -102,8 +101,8 @@ const Verselist = ({ chapters, Name, imageUrl, setImageUrl }) => {
               <VerseCard
                 chapter={item}
                 key={index}
-                imageUrl={imageUrl}
-                setImageUrl={setImageUrl}
+                EyeIcon={ EyeIcon}
+                setEyeIcon={setEyeIcon}
                 Name={Name}
               />
             </div>

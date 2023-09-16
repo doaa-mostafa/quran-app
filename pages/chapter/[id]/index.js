@@ -9,7 +9,7 @@ import Head from "next/head";
 import Loading from "../../../components/Loading";
 
 const SingleChapter = ({ chapters, Name }) => {
-  const [imageUrl, setImageUrl] = useState("/view.png");
+  const [EyeIcon, setEyeIcon] = useState("/view.png");
   const [showSidebar, setShowSidebar] = useState(false);
   const [showNavbar, setshowNavbar] = useState(false);
   const [loading, setLoading] = useState(true); // Added loading state
@@ -33,8 +33,8 @@ const SingleChapter = ({ chapters, Name }) => {
       </Head>
       <div className="dark:bg-[#282c2f]">
         <Header
-          imageUrl={imageUrl}
-          setImageUrl={setImageUrl}
+          EyeIcon={EyeIcon}
+          setEyeIcon={setEyeIcon}
           toggleSidebar={toggleSidebar}
           toggleNavbar={toggleNavbar}
         />
@@ -51,8 +51,8 @@ const SingleChapter = ({ chapters, Name }) => {
                 <Verselist
                   chapters={chapters}
                   Name={Name}
-                  imageUrl={imageUrl}
-                  setImageUrl={setImageUrl}
+                  EyeIcon={EyeIcon}
+                  setEyeIcon={setEyeIcon}
                 />
               </>
             )}
@@ -64,16 +64,16 @@ const SingleChapter = ({ chapters, Name }) => {
 };
 
 export async function getServerSideProps({ req, params }) {
-  const session = await getSession({ req });
+  // const session = await getSession({ req });
 
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
+  // if (!session) {
+  //   return {
+  //     redirect: {
+  //       destination: "/login",
+  //       permanent: false,
+  //     },
+  //   };
+  // }
 
   const chapterid = params.id;
 
@@ -89,7 +89,7 @@ export async function getServerSideProps({ req, params }) {
 
   return {
     props: {
-      session,
+      // session,
       chapters: chapters.verses,
       Name: name.chapter,
     },
