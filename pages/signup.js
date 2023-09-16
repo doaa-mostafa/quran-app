@@ -2,7 +2,6 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Link from "next/link";
 import styles from "../styles/Form.module.css";
-import { useState } from "react";
 import { useFormik } from "formik";
 import { registerValidate } from "../lib/validate";
 import { useRouter } from "next/router";
